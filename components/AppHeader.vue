@@ -6,15 +6,14 @@
 				<span>Roomerang</span>
 			</div>
 			<!-- Filter & Search -->
-			<div>
-				<span>Test</span>
-			</div>
+			<NavSearch />
+			<!-- Actions -->
 			<div class="flex">
-				<button class="btn btn-sm btn-ghost rounded-full">Rent your house</button>
-				<button class="btn btn-sm btn-ghost btn-circle mr-3">
+				<button class="btn-ghost btn-sm btn rounded-full">Rent your house</button>
+				<button class="btn-ghost btn-sm btn-circle btn mr-3">
 					<Icon name="mingcute:earth-line" />
 				</button>
-				<button class="btn btn-sm btn-outline rounded-full">
+				<button class="btn-outline btn-sm btn rounded-full">
 					<Icon name="mingcute:menu-line" />
 					<Icon name="mingcute:user-4-fill" size="2em" />
 				</button>
