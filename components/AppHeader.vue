@@ -1,3 +1,8 @@
+<script setup lang="ts">
+	// Try vue use
+	// use media query
+</script>
+
 <template>
 	<header>
 		<div class="navbar justify-between bg-red-200">

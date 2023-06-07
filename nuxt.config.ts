@@ -6,5 +6,5 @@ export default defineNuxtConfig({
 	eslint: {
 		lintOnStart: false,
 	},
-	modules: ["@nuxtjs/eslint-module", "@nuxtjs/tailwindcss", "nuxt-icon"],
+	modules: ["@nuxtjs/eslint-module", "@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
 })
