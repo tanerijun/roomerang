@@ -1,8 +1,3 @@
-<script setup lang="ts">
-	// Try vue use
-	// use media query
-</script>
-
 <template>
 	<header>
 		<div class="navbar justify-between bg-red-200">
@@ -11,8 +6,7 @@
 				<span>Roomerang</span>
 			</div>
 			<!-- Filter & Search -->
-			<NavSearch class="hidden sm:flex" />
-			<NavSearchMobile class="sm:hidden" />
+			<NavSearch />
 			<!-- Actions -->
 			<div class="hidden sm:flex">
 				<button class="btn-ghost btn-sm btn rounded-full">Rent your house</button>
