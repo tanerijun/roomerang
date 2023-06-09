@@ -8,7 +8,7 @@
 		<div class="navbar justify-between bg-red-200">
 			<template v-if="isLargeScreen">
 				<!-- Logo -->
-				<div>
+				<div class="block">
 					<span>Roomerang</span>
 				</div>
 				<!-- Filter & Search -->
