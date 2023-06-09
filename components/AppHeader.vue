@@ -27,17 +27,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- Actions -->
-				<div class="flex">
-					<button class="btn-ghost btn-sm btn rounded-full">Rent your house</button>
-					<button class="btn-ghost btn-sm btn-circle btn mr-3">
-						<Icon name="mingcute:earth-line" />
-					</button>
-					<button class="btn-outline btn-sm btn h-10 rounded-full">
-						<Icon name="mingcute:menu-line" />
-						<Icon name="mingcute:user-4-fill" size="2em" />
-					</button>
-				</div>
+				<AppHeaderActions />
 			</template>
 			<template v-else>
 				<!-- Mobile Search -->
