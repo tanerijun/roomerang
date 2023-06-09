@@ -6,5 +6,11 @@ export default defineNuxtConfig({
 	eslint: {
 		lintOnStart: false,
 	},
-	modules: ["@nuxtjs/eslint-module", "@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
+	modules: [
+		"@nuxtjs/eslint-module",
+		"@nuxtjs/tailwindcss",
+		"nuxt-icon",
+		"@vueuse/nuxt",
+		"nuxt-headlessui",
+	],
 })
