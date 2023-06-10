@@ -1,42 +1,34 @@
-# Nuxt 3 Minimal Starter
+# Welcome to Remix!
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- [Remix Docs](https://remix.run/docs)
 
-## Setup
+## Deployment
 
-Make sure to install the dependencies:
+After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
 
-```bash
-# yarn
-yarn install
+If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
 
-# npm
-npm install
-
-# pnpm
-pnpm install
+```sh
+npm i -g vercel
+vercel
 ```
 
-## Development Server
+It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
 
-Start the development server on `http://localhost:3000`
+## Development
 
-```bash
+To run your Remix app locally, make sure your project's local dependencies are installed:
+
+```sh
+npm install
+```
+
+Afterwards, start the Remix development server like so:
+
+```sh
 npm run dev
 ```
 
-## Production
+Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.

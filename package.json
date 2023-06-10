@@ -1,28 +1,31 @@
 {
-	"name": "roomerang",
-	"private": true,
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare",
-		"lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
-		"format": "prettier --write --ignore-path .gitignore ."
-	},
-	"devDependencies": {
-		"@nuxt/devtools": "^0.5.5",
-		"@nuxtjs/eslint-config-typescript": "^12.0.0",
-		"@nuxtjs/eslint-module": "^4.1.0",
-		"@nuxtjs/tailwindcss": "^6.7.0",
-		"@types/node": "^18",
-		"@vueuse/nuxt": "^10.1.2",
-		"daisyui": "^3.0.2",
-		"eslint-config-prettier": "^8.8.0",
-		"nuxt": "^3.5.2",
-		"nuxt-headlessui": "^1.1.4",
-		"nuxt-icon": "^0.4.1",
-		"prettier": "^2.8.8",
-		"prettier-plugin-tailwindcss": "^0.3.0"
-	}
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@remix-run/css-bundle": "^1.17.0",
+    "@remix-run/node": "^1.17.0",
+    "@remix-run/react": "^1.17.0",
+    "@remix-run/vercel": "^1.17.0",
+    "@vercel/node": "^2.10.3",
+    "isbot": "^3.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.17.0",
+    "@remix-run/eslint-config": "^1.17.0",
+    "@remix-run/serve": "^1.17.0",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
