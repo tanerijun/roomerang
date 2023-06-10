@@ -1,12 +1,26 @@
 import { cssBundleHref } from "@remix-run/css-bundle"
 import type { LinksFunction } from "@remix-run/node"
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react"
+
+import AppHeader from "~/components/AppHeader"
+import AppFooter from "~/components/AppFooter"
+
 import globalStyleSheet from "~/styles/global.css"
 
 export const links: LinksFunction = () => [
 	...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 	{ rel: "stylesheet", href: globalStyleSheet },
 ]
+
+function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<>
+			<AppHeader />
+			{children}
+			<AppFooter />
+		</>
+	)
+}
 
 export default function App() {
 	return (
@@ -18,7 +32,9 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<Outlet />
+				<RootLayout>
+					<Outlet />
+				</RootLayout>
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
