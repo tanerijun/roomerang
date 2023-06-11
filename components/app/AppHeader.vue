@@ -1,7 +1,7 @@
 <template>
 	<header class="h-20 flex items-center justify-between">
 		<NavLogo />
-		<NavSearchAndFilter />
+		<NavActions />
 		<NavUserActions />
 	</header>
 </template>

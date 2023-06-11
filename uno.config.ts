@@ -1,5 +1,13 @@
 import { defineConfig, presetWind, presetIcons } from "unocss"
 
 export default defineConfig({
-	presets: [presetWind(), presetIcons()],
+	presets: [
+		presetWind(),
+		presetIcons({
+			extraProperties: {
+				display: "inline-block",
+				"vertical-align": "middle",
+			},
+		}),
+	],
 })
