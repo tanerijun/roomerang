@@ -1,6 +1,0 @@
-{
-	"extends": ["@nuxtjs/eslint-config-typescript", "@unocss", "prettier"],
-	"rules": {
-		"vue/multi-word-component-names": 0
-	}
-}
