@@ -9,7 +9,20 @@ import {
 } from "@remix-run/react"
 import styles from "./globals.css"
 
+import AppHeader from "~/components/AppHeader"
+import AppFooter from "~/components/AppFooter"
+
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
+
+function RootLayout({ children }: { children: React.ReactNode }) {
+	return (
+		<>
+			<AppHeader />
+			{children}
+			<AppFooter />
+		</>
+	)
+}
 
 export default function App() {
 	return (
@@ -21,7 +34,9 @@ export default function App() {
 				<Links />
 			</head>
 			<body>
-				<Outlet />
+				<RootLayout>
+					<Outlet />
+				</RootLayout>
 				<ScrollRestoration />
 				<Scripts />
 				<LiveReload />
