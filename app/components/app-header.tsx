@@ -1,3 +1,6 @@
+import { Globe } from "lucide-react"
+import { Button } from "~/components/ui/button"
+
 function Logo() {
 	return (
 		<div>
@@ -8,9 +11,11 @@ function Logo() {
 
 function Actions() {
 	return (
-		<div>
-			<button>Rent your house</button>
-			<button>World</button>
+		<div className="flex items-center">
+			<Button variant="ghost">Rent your house</Button>
+			<Button variant="ghost">
+				<Globe size="20" />
+			</Button>
 			<button>User</button>
 		</div>
 	)

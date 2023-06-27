@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node"
+import type { LinksFunction } from "@remix-run/cloudflare"
 import {
 	Links,
 	LiveReload,
@@ -7,10 +7,10 @@ import {
 	Scripts,
 	ScrollRestoration,
 } from "@remix-run/react"
-import styles from "./globals.css"
+import styles from "~/styles/global.css"
 
-import AppHeader from "~/components/AppHeader"
-import AppFooter from "~/components/AppFooter"
+import AppHeader from "~/components/app-header"
+import AppFooter from "~/components/app-footer"
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }]
 
@@ -33,7 +33,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body>
+			<body className="mx-auto max-w-7xl">
 				<RootLayout>
 					<Outlet />
 				</RootLayout>
