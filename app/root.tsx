@@ -33,7 +33,7 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body className="mx-auto max-w-7xl">
+			<body className="">
 				<RootLayout>
 					<Outlet />
 				</RootLayout>
