@@ -1,10 +1,7 @@
 import type { V2_MetaFunction } from "@remix-run/cloudflare"
 
 export const meta: V2_MetaFunction = () => {
-	return [
-		{ title: "Roomerang" },
-		{ name: "description", content: "An AirBNB-like app" },
-	]
+	return [{ title: "Roomerang" }, { name: "description", content: "An AirBNB-like app" }]
 }
 
 export default function Index() {

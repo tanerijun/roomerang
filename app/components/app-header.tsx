@@ -8,6 +8,8 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "./ui/dropdown-menu"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog"
+import { useState } from "react"
 
 function Logo() {
 	return (
@@ -27,6 +29,17 @@ function Actions() {
 				<GlobeIcon size="20" />
 			</Button>
 
+			<ActionDropdown />
+		</div>
+	)
+}
+
+function ActionDropdown() {
+	const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+	const [isSignupModalOpen, setIsSignupModalOpen] = useState(false)
+
+	return (
+		<>
 			<DropdownMenu>
 				<DropdownMenuTrigger>
 					<Button variant="outline" className="py-6 gap-2">
@@ -41,16 +54,58 @@ function Actions() {
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent>
-					<DropdownMenuItem>
-						<strong>Sign up</strong>
+					<DropdownMenuItem onClick={() => setIsLoginModalOpen(!isLoginModalOpen)}>
+						Log in
 					</DropdownMenuItem>
-					<DropdownMenuItem>Log in</DropdownMenuItem>
+					<DropdownMenuItem onClick={() => setIsSignupModalOpen(!isSignupModalOpen)}>
+						Sign up
+					</DropdownMenuItem>
 					<DropdownMenuSeparator />
 					<DropdownMenuItem>Rent your house</DropdownMenuItem>
 					<DropdownMenuItem>Help</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>
-		</div>
+			<LoginModal open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen} />
+			<SignupModal open={isSignupModalOpen} onOpenChange={setIsSignupModalOpen} />
+		</>
+	)
+}
+
+function LoginModal({ open, onOpenChange }: { open: boolean; onOpenChange: (a: boolean) => void }) {
+	return (
+		<Dialog open={open} onOpenChange={onOpenChange}>
+			<DialogContent>
+				<DialogHeader>
+					<DialogTitle>Are you sure absolutely sure?</DialogTitle>
+					<DialogDescription>
+						This action cannot be undone. This will permanently delete your account and remove your
+						data from our servers.
+					</DialogDescription>
+				</DialogHeader>
+			</DialogContent>
+		</Dialog>
+	)
+}
+
+function SignupModal({
+	open,
+	onOpenChange,
+}: {
+	open: boolean
+	onOpenChange: (a: boolean) => void
+}) {
+	return (
+		<Dialog open={open} onOpenChange={onOpenChange}>
+			<DialogContent>
+				<DialogHeader>
+					<DialogTitle>Are you sure absolutely sure?</DialogTitle>
+					<DialogDescription>
+						This action cannot be undone. This will permanently delete your account and remove your
+						data from our servers.
+					</DialogDescription>
+				</DialogHeader>
+			</DialogContent>
+		</Dialog>
 	)
 }
 
