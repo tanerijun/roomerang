@@ -1,5 +1,6 @@
-import { Globe } from "lucide-react"
-import { Button } from "~/components/ui/button"
+import { GlobeIcon, MenuIcon, User2Icon } from "lucide-react"
+import { Button } from "./ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 function Logo() {
 	return (
@@ -10,13 +11,23 @@ function Logo() {
 }
 
 function Actions() {
+	// TODO: Correct button size and style
 	return (
 		<div className="flex items-center">
 			<Button variant="ghost">Rent your house</Button>
 			<Button variant="ghost">
-				<Globe size="20" />
+				<GlobeIcon size="20" />
 			</Button>
-			<button>User</button>
+			<Button variant="outline" className="ml-2 py-6 gap-2">
+				<MenuIcon size="20" />
+				<Avatar>
+					{/* TODO: Change with link to avatar later */}
+					<AvatarImage src={undefined} />
+					<AvatarFallback>
+						<User2Icon size="20" />
+					</AvatarFallback>
+				</Avatar>
+			</Button>
 		</div>
 	)
 }
