@@ -41,7 +41,7 @@ function ActionDropdown() {
 	return (
 		<>
 			<DropdownMenu>
-				<DropdownMenuTrigger>
+				<DropdownMenuTrigger asChild>
 					<Button variant="outline" className="py-6 gap-2">
 						<MenuIcon size="20" />
 						<Avatar>
