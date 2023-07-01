@@ -8,8 +8,8 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "./ui/dropdown-menu"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog"
 import { useState } from "react"
+import { LoginModal, SignupModal } from "./auth-form"
 
 function Logo() {
 	return (
@@ -68,44 +68,6 @@ function ActionDropdown() {
 			<LoginModal open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen} />
 			<SignupModal open={isSignupModalOpen} onOpenChange={setIsSignupModalOpen} />
 		</>
-	)
-}
-
-function LoginModal({ open, onOpenChange }: { open: boolean; onOpenChange: (a: boolean) => void }) {
-	return (
-		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogContent>
-				<DialogHeader>
-					<DialogTitle>Are you sure absolutely sure?</DialogTitle>
-					<DialogDescription>
-						This action cannot be undone. This will permanently delete your account and remove your
-						data from our servers.
-					</DialogDescription>
-				</DialogHeader>
-			</DialogContent>
-		</Dialog>
-	)
-}
-
-function SignupModal({
-	open,
-	onOpenChange,
-}: {
-	open: boolean
-	onOpenChange: (a: boolean) => void
-}) {
-	return (
-		<Dialog open={open} onOpenChange={onOpenChange}>
-			<DialogContent>
-				<DialogHeader>
-					<DialogTitle>Are you sure absolutely sure?</DialogTitle>
-					<DialogDescription>
-						This action cannot be undone. This will permanently delete your account and remove your
-						data from our servers.
-					</DialogDescription>
-				</DialogHeader>
-			</DialogContent>
-		</Dialog>
 	)
 }
 
