@@ -1,4 +1,5 @@
 import { json, type ActionArgs, type LoaderArgs } from "@remix-run/cloudflare"
+import { useLoaderData } from "@remix-run/react"
 
 export async function loader({ request, context }: LoaderArgs) {
 	console.log(context.env.ENVIRONMENT)
@@ -20,5 +21,14 @@ export async function action({ request }: ActionArgs) {
 }
 
 export default function Login() {
-	return <div>Login page</div>
+	const data = useLoaderData<typeof loader>()
+
+	return (
+		<div>
+			<p>Login page</p>
+			<p>CLoudflare env: {data.cfEnv}</p>
+			<p>Node env: {data.nodeEnv}</p>
+			<p>Reading process: {process.env.NODE_ENV}</p>
+		</div>
+	)
 }
